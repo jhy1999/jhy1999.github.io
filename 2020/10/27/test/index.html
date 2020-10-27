@@ -5,15 +5,17 @@
   
 
   
-  <title>test | Hexo</title>
+  <title>javascript中null和undefined的区别 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="test">
+  <meta name="description" content="null在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。 用 typeof 检测 null 返回的是 object。 12var person &#x3D; null;console.log(typeof person); &#x2F;&#x2F;值为 null(空), 但类型为对象  undefined在 JavaScript 中, undefined 是">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript中null和undefined的区别">
 <meta property="og:url" content="http://example.com/2020/10/27/test/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="null在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。 用 typeof 检测 null 返回的是 object。 12var person &#x3D; null;console.log(typeof person); &#x2F;&#x2F;值为 null(空), 但类型为对象  undefined在 JavaScript 中, undefined 是">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-10-27T04:17:35.000Z">
-<meta property="article:modified_time" content="2020-10-27T04:17:35.281Z">
+<meta property="article:modified_time" content="2020-10-27T04:25:40.478Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -78,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      test
+      javascript中null和undefined的区别
     </h1>
   
 
@@ -86,7 +88,17 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。</p>
+<p>用 typeof 检测 null 返回的是 object。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">//值为 null(空), 但类型为对象</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3><p>在 JavaScript 中, <strong>undefined</strong> 是一个没有设置值的变量。</p>
+<p><strong>typeof</strong> 一个没有值的变量会返回 <strong>undefined</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line"><span class="comment">//任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined。</span></span><br><span class="line">person = <span class="literal">undefined</span>; <span class="comment">// 值为 undefined, 类型是undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h3><p>null 和 undefined 的值相等，但类型不等：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
       
     </div>
     <footer class="article-footer">
@@ -139,7 +151,7 @@
       <ul>
         
           <li>
-            <a href="/2020/10/27/test/">test</a>
+            <a href="/2020/10/27/test/">javascript中null和undefined的区别</a>
           </li>
         
           <li>
