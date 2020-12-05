@@ -7,14 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> - 所有不能打倒我的，都将使我更强大！</title>
+  <title>对Vue接口参数是file类型的处理 - 所有不能打倒我的，都将使我更强大！</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
-  <meta name="description" content="如果接口参数是file如何处理最近一个项目需要做一个类..."> 
+  <meta name="description" content="如果接口参数是 file 如何处理最近一个项目需要做一..."> 
   
   <meta name="author" content="leesin"> 
 
@@ -105,6 +105,17 @@
   
 
 
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center">对Vue接口参数是file类型的处理</div>
+  <div class="right">
+    
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+
   <nav class="menu">
   <div class="menu-wrap">
     <div class="menu-close">
@@ -153,30 +164,30 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title"></h1>
+    <h1 class="head-title">对Vue接口参数是file类型的处理</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 05, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2181</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2162</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        <h1 id="如果接口参数是file如何处理"><a href="#如果接口参数是file如何处理" class="headerlink" title="如果接口参数是file如何处理"></a>如果接口参数是file如何处理</h1><p>最近一个项目需要做一个类似于动态发布的效果其中一个接口参数类型要求是file类型</p>
-<p>一开始我以为很简单，不就是拿到file然后传值给data吗？事实证明我还是太年轻</p>
+        <h1 id="如果接口参数是-file-如何处理"><a href="#如果接口参数是-file-如何处理" class="headerlink" title="如果接口参数是 file 如何处理"></a>如果接口参数是 file 如何处理</h1><p>最近一个项目需要做一个类似于动态发布的效果其中一个接口参数类型要求是 file 类型</p>
+<p>一开始我以为很简单，不就是拿到 file 然后传值给 data 吗？事实证明我还是太年轻</p>
 <p>最开始的处理方式：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;input</span><br><span class="line">  type=<span class="string">&quot;file&quot;</span></span><br><span class="line">  name=<span class="string">&quot;filedata&quot;</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;img-upload&quot;</span></span><br><span class="line">  accept=<span class="string">&quot;image/*&quot;</span></span><br><span class="line">  capture=<span class="string">&quot;camera&quot;</span></span><br><span class="line">  multiple=<span class="string">&quot;multiple&quot;</span></span><br><span class="line">  ref=<span class="string">&quot;file&quot;</span></span><br><span class="line">  @change=<span class="string">&quot;fileChange($event)&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line"> </span><br><span class="line">      </span><br><span class="line"> <span class="function"><span class="title">fileChange</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">let</span> file  = e.target.files[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">let</span> data = &#123;</span><br><span class="line">       s:<span class="string">&#x27;App.Examples_Upload.Go&#x27;</span>,</span><br><span class="line">       token: <span class="built_in">localStorage</span>.getItem(<span class="string">&quot;token&quot;</span>),</span><br><span class="line">       user_id :<span class="built_in">localStorage</span>.getItem(<span class="string">&quot;user_id&quot;</span>),</span><br><span class="line">       file : file</span><br><span class="line">     &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(data.file) <span class="comment">//file对象</span></span><br><span class="line">     axios(&#123;</span><br><span class="line">         url:<span class="string">&quot;上传地址&quot;</span>,</span><br><span class="line">         method:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">         headers:&#123;</span><br><span class="line">             <span class="string">&#x27;content-type&#x27;</span>:<span class="string">&#x27;application/xx-www-form-urlencoded;multipart/form=data&#x27;</span></span><br><span class="line">         &#125;,</span><br><span class="line">         data:data</span><br><span class="line">     &#125;).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(res)</span><br><span class="line">     &#125;)</span><br><span class="line">  &#125;  </span><br></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">&lt;input</span><br><span class="line">  type=<span class="string">&quot;file&quot;</span></span><br><span class="line">  name=<span class="string">&quot;filedata&quot;</span></span><br><span class="line">  <span class="class"><span class="keyword">class</span></span>=<span class="string">&quot;img-upload&quot;</span></span><br><span class="line">  accept=<span class="string">&quot;image/*&quot;</span></span><br><span class="line">  capture=<span class="string">&quot;camera&quot;</span></span><br><span class="line">  multiple=<span class="string">&quot;multiple&quot;</span></span><br><span class="line">  ref=<span class="string">&quot;file&quot;</span></span><br><span class="line">  @change=<span class="string">&quot;fileChange($event)&quot;</span></span><br><span class="line">/&gt;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"> <span class="function"><span class="title">fileChange</span>(<span class="params">event</span>)</span>&#123;</span><br><span class="line">       <span class="keyword">let</span> file  = e.target.files[<span class="number">0</span>];</span><br><span class="line">       <span class="keyword">let</span> data = &#123;</span><br><span class="line">       s:<span class="string">&#x27;App.Examples_Upload.Go&#x27;</span>,</span><br><span class="line">       token: <span class="built_in">localStorage</span>.getItem(<span class="string">&quot;token&quot;</span>),</span><br><span class="line">       user_id :<span class="built_in">localStorage</span>.getItem(<span class="string">&quot;user_id&quot;</span>),</span><br><span class="line">       file : file</span><br><span class="line">     &#125;</span><br><span class="line">      <span class="built_in">console</span>.log(data.file) <span class="comment">//file对象</span></span><br><span class="line">     axios(&#123;</span><br><span class="line">         url:<span class="string">&quot;上传地址&quot;</span>,</span><br><span class="line">         method:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">         headers:&#123;</span><br><span class="line">             <span class="string">&#x27;content-type&#x27;</span>:<span class="string">&#x27;application/xx-www-form-urlencoded;multipart/form=data&#x27;</span></span><br><span class="line">         &#125;,</span><br><span class="line">         data:data</span><br><span class="line">     &#125;).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(res)</span><br><span class="line">     &#125;)</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
 
-<p>接下来 问题来了 当我打印res的时候发现file里面并没有值</p>
+<p>接下来 问题来了 当我打印 res 的时候发现 file 里面并没有值</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">config: &#123;url: &quot;/&quot;, method: &quot;post&quot;, data: &quot;&#123;&quot;s&quot;:&quot;App.Examples_Upload.Go&quot;,&quot;token&quot;:&quot;4DDA05B48D4…EC7FBEECAC4202E00735886&quot;,&quot;user_id&quot;:&quot;1&quot;,&quot;file&quot;:&#123;&#125;&#125;&quot;, headers: &#123;…&#125;, baseURL: &quot;api&quot;, …&#125;</span><br><span class="line">data:</span><br><span class="line">data: &#123;&#125;</span><br><span class="line">msg: &quot;非法请求：缺少上传文件：file&quot;</span><br><span class="line">ret: 400</span><br></pre></td></tr></table></figure>
 
-<p>可以看到在请求的data里面file为空 一直想不明白为什么 </p>
-<p>最后在网上发现都是使用formData 于是我也试了一下</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"> <span class="keyword">let</span> formdata = <span class="keyword">new</span> FormData();</span><br><span class="line"> formdata.append(<span class="string">&#x27;file&#x27;</span>,file);</span><br><span class="line"> formdata.append(<span class="string">&#x27;s&#x27;</span>,<span class="string">&quot;App.Examples_Upload.Go&quot;</span>);</span><br><span class="line"> formdata.append(<span class="string">&#x27;user_id&#x27;</span>,<span class="built_in">localStorage</span>.getItem(<span class="string">&quot;user_id&quot;</span>));   formdata.append(<span class="string">&#x27;token&#x27;</span>,<span class="built_in">localStorage</span>.getItem(<span class="string">&quot;token&quot;</span>));</span><br><span class="line">axios(&#123;</span><br><span class="line">     url:<span class="string">&quot;上传地址&quot;</span>,</span><br><span class="line">     method:<span class="string">&quot;post&quot;</span>,</span><br><span class="line">     headers:&#123;</span><br><span class="line">       <span class="string">&#x27;content-type&#x27;</span>:<span class="string">&#x27;application/xx-www-form-urlencoded;multipart/form=data&#x27;</span></span><br><span class="line">         &#125;,</span><br><span class="line">      data:foemdata</span><br><span class="line">     &#125;).then(<span class="function">(<span class="params">res</span>)=&gt;</span>&#123;</span><br><span class="line">         <span class="built_in">console</span>.log(res)</span><br><span class="line">     &#125;)</span><br></pre></td></tr></table></figure>
+<p>可以看到在请求的 data 里面 file 为空 一直想不明白为什么</p>
+<p>最后在网上发现都是使用 formData 于是我也试了一下</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> formdata = <span class="keyword">new</span> FormData();</span><br><span class="line">formdata.append(<span class="string">&quot;file&quot;</span>, file);</span><br><span class="line">formdata.append(<span class="string">&quot;s&quot;</span>, <span class="string">&quot;App.Examples_Upload.Go&quot;</span>);</span><br><span class="line">formdata.append(<span class="string">&quot;user_id&quot;</span>, <span class="built_in">localStorage</span>.getItem(<span class="string">&quot;user_id&quot;</span>));</span><br><span class="line">formdata.append(<span class="string">&quot;token&quot;</span>, <span class="built_in">localStorage</span>.getItem(<span class="string">&quot;token&quot;</span>));</span><br><span class="line">axios(&#123;</span><br><span class="line">  url: <span class="string">&quot;上传地址&quot;</span>,</span><br><span class="line">  method: <span class="string">&quot;post&quot;</span>,</span><br><span class="line">  headers: &#123;</span><br><span class="line">    <span class="string">&quot;content-type&quot;</span>: <span class="string">&quot;application/xx-www-form-urlencoded;multipart/form=data&quot;</span>,</span><br><span class="line">  &#125;,</span><br><span class="line">  data: foemdata,</span><br><span class="line">&#125;).then(<span class="function">(<span class="params">res</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="built_in">console</span>.log(res);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
 
-<p>完美解决 可是还是想不通为什么直接传file不行 可能是因为file是个对象？</p>
+<p>完美解决 可是还是想不通为什么直接传 file 不行 可能是因为 file 是个对象？</p>
 
       </section>
       <section class="extra">
@@ -195,10 +206,10 @@
         
 <nav class="nav">
   
-    <a href="/2020/12/05/JS%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E9%95%BF%E5%BA%A6/"><i class="iconfont iconleft"></i></a>
+    <a href="/2020/12/05/JS%E8%8E%B7%E5%8F%96%E8%A7%86%E9%A2%91%E9%95%BF%E5%BA%A6/"><i class="iconfont iconleft"></i>获取音视频文件的长度</a>
   
   
-    <a href="/2020/12/05/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E7%82%B9/"><i class="iconfont iconright"></i></a>
+    <a href="/2020/12/05/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E7%82%B9/">关于JS中的三个点(...)<i class="iconfont iconright"></i></a>
   
 </nav>
 

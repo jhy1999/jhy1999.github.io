@@ -7,14 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title> - 所有不能打倒我的，都将使我更强大！</title>
+  <title>获取音视频文件的长度 - 所有不能打倒我的，都将使我更强大！</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
-  <meta name="description" content="通过JS获取视频的长度对于这个问题我采用的是durat..."> 
+  <meta name="description" content="通过 JS 获取视频的长度对于这个问题我采用的是 du..."> 
   
   <meta name="author" content="leesin"> 
 
@@ -105,6 +105,17 @@
   
 
 
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center">获取音视频文件的长度</div>
+  <div class="right">
+    
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+
   <nav class="menu">
   <div class="menu-wrap">
     <div class="menu-close">
@@ -153,27 +164,26 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title"></h1>
+    <h1 class="head-title">获取音视频文件的长度</h1>
     <div class="head-info">
       <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 05, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2097</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>2122</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        <h1 id="通过JS获取视频的长度"><a href="#通过JS获取视频的长度" class="headerlink" title="通过JS获取视频的长度"></a>通过JS获取视频的长度</h1><p>对于这个问题我采用的是duration属性来获取音视频文件的长度</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;van-uploader</span><br><span class="line">  accept=<span class="string">&quot;.mp4&quot;</span></span><br><span class="line">  :max-count=<span class="string">&quot;1&quot;</span></span><br><span class="line">  :after-read=<span class="string">&quot;afterRead&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/van-uploader&gt;  </span><br></pre></td></tr></table></figure>
+        <h1 id="通过-JS-获取视频的长度"><a href="#通过-JS-获取视频的长度" class="headerlink" title="通过 JS 获取视频的长度"></a>通过 JS 获取视频的长度</h1><p>对于这个问题我采用的是 duration 属性来获取音视频文件的长度</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;van-uploader</span><br><span class="line">  accept=<span class="string">&quot;.mp4&quot;</span></span><br><span class="line">  :max-count=<span class="string">&quot;1&quot;</span></span><br><span class="line">  :after-read=<span class="string">&quot;afterRead&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">&lt;/van-uploader&gt;</span><br></pre></td></tr></table></figure>
 
-<p>注:因为项目需要使用vue的UI库vant，所以我这里用的是van-uploader，after-read是这个组件文件上传完成过后的回调函数和input标签里定义方法是一样的 </p>
-<p>在vue中实现</p>
+<p>注:因为项目需要使用 vue 的 UI 库 vant，所以我这里用的是 van-uploader，after-read 是这个组件文件上传完成过后的回调函数和 input 标签里定义方法是一样的</p>
+<p>在 vue 中实现</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">afterRead</span>(<span class="params">file</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(file) <span class="comment">//file对象</span></span><br><span class="line">    <span class="keyword">let</span> url = URL.createObjectURL(file.file);<span class="comment">//获取当前文件的一个内存URL</span></span><br><span class="line">    <span class="comment">//URL.createObjectURL()会创建一个DOMString，其中包含一个表示参数中给出的对象的URL。这个新的URL对象表示指定的 File 对象或 Blob 对象</span></span><br><span class="line">    <span class="keyword">let</span> audioElement = <span class="keyword">new</span> Audio(url);<span class="comment">//创建一个音视频文件对象</span></span><br><span class="line">    <span class="built_in">console</span>.log(audioElement)</span><br><span class="line">    <span class="comment">//&lt;audio preload=&quot;auto&quot;src=&quot;blob:http://localhost:8080/2c1e043e-f912-4541-bc71-334f733912bf&quot;&gt;&lt;/audio&gt;</span></span><br><span class="line">    audioElement.addEventListener(<span class="string">&quot;loadedmetadata&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params">_event</span>) </span>&#123;</span><br><span class="line">        <span class="comment">//给音视频文件对象添加方法,loadedmetadata表示当指定的音频/视频的元数据已加载时，会发生事件</span></span><br><span class="line">        <span class="keyword">let</span> duration = audioElement.duration;</span><br><span class="line">        <span class="comment">//duration是H5 Audio的一个属性 可以获取音视频文件的长度</span></span><br><span class="line">        <span class="keyword">let</span> result = <span class="built_in">parseInt</span>(duration);</span><br><span class="line">        <span class="comment">//转化为整形</span></span><br><span class="line">        <span class="keyword">let</span> h =</span><br><span class="line">          <span class="built_in">Math</span>.floor(result / <span class="number">3600</span>) &lt; <span class="number">10</span></span><br><span class="line">            ? <span class="string">&quot;0&quot;</span> + <span class="built_in">Math</span>.floor(result / <span class="number">3600</span>)</span><br><span class="line">            : <span class="built_in">Math</span>.floor(result / <span class="number">3600</span>);<span class="comment">//如果小于10就在前面加个0</span></span><br><span class="line">        <span class="keyword">let</span> m =</span><br><span class="line">          <span class="built_in">Math</span>.floor((result / <span class="number">60</span>) % <span class="number">60</span>) &lt; <span class="number">10</span></span><br><span class="line">            ? <span class="string">&quot;0&quot;</span> + <span class="built_in">Math</span>.floor((result / <span class="number">60</span>) % <span class="number">60</span>)</span><br><span class="line">            : <span class="built_in">Math</span>.floor((result / <span class="number">60</span>) % <span class="number">60</span>);</span><br><span class="line">        <span class="keyword">let</span> s =</span><br><span class="line">          <span class="built_in">Math</span>.floor(result % <span class="number">60</span>) &lt; <span class="number">10</span></span><br><span class="line">            ? <span class="string">&quot;0&quot;</span> + <span class="built_in">Math</span>.floor(result % <span class="number">60</span>)</span><br><span class="line">            : <span class="built_in">Math</span>.floor(result % <span class="number">60</span>);</span><br><span class="line">        <span class="built_in">console</span>.log(h + <span class="string">&quot;:&quot;</span> + m + <span class="string">&quot;:&quot;</span> + s)</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>通过原生JS实现</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&quot;file&quot;</span> name=<span class="string">&quot;&quot;</span> id=<span class="string">&quot;test&quot;</span> value=<span class="string">&quot;&quot;</span> onchange=<span class="string">&quot;getFile()&quot;</span> /&gt;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFile</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">	<span class="keyword">let</span> file = <span class="built_in">document</span>.getElementById(<span class="string">&quot;test&quot;</span>).files[<span class="number">0</span>];</span><br><span class="line">	<span class="built_in">console</span>.log(file)<span class="comment">//file对象</span></span><br><span class="line">	<span class="keyword">let</span> url = URL.createObjectURL(file);</span><br><span class="line">	<span class="keyword">let</span> video = <span class="built_in">document</span>.createElement(<span class="string">&quot;video&quot;</span>);</span><br><span class="line">	video.src = url;</span><br><span class="line">	video.addEventListener(<span class="string">&quot;loadedmetadata&quot;</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		<span class="built_in">console</span>.log(video.duration)</span><br><span class="line">	&#125;)</span><br><span class="line">&#125;</span><br><span class="line">    </span><br></pre></td></tr></table></figure>
-
+<p>通过原生 JS 实现</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;input type=<span class="string">&quot;file&quot;</span> name=<span class="string">&quot;&quot;</span> id=<span class="string">&quot;test&quot;</span> value=<span class="string">&quot;&quot;</span> onchange=<span class="string">&quot;getFile()&quot;</span> /&gt;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFile</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="keyword">let</span> file = <span class="built_in">document</span>.getElementById(<span class="string">&quot;test&quot;</span>).files[<span class="number">0</span>];</span><br><span class="line">  <span class="built_in">console</span>.log(file); <span class="comment">//file对象</span></span><br><span class="line">  <span class="keyword">let</span> url = URL.createObjectURL(file);</span><br><span class="line">  <span class="keyword">let</span> video = <span class="built_in">document</span>.createElement(<span class="string">&quot;video&quot;</span>);</span><br><span class="line">  video.src = url;</span><br><span class="line">  video.addEventListener(<span class="string">&quot;loadedmetadata&quot;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(video.duration);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       </section>
       <section class="extra">
@@ -193,7 +203,7 @@
 <nav class="nav">
   
   
-    <a href="/2020/12/05/Vue%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0%E6%98%AFfile%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/"><i class="iconfont iconright"></i></a>
+    <a href="/2020/12/05/Vue%E4%B8%AD%E6%8E%A5%E5%8F%A3%E5%8F%82%E6%95%B0%E6%98%AFfile%E7%B1%BB%E5%9E%8B%E7%9A%84%E5%A4%84%E7%90%86%E6%96%B9%E6%B3%95/">对Vue接口参数是file类型的处理<i class="iconfont iconright"></i></a>
   
 </nav>
 
