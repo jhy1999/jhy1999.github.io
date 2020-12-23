@@ -7,14 +7,14 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>javascript中null和undefined的区别 - 所有不能打倒我的，都将使我更强大！</title>
+  <title>Vscode配置PHP开发环境 - 所有不能打倒我的，都将使我更强大！</title>
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="google" content="notranslate" />
 
   
   
-  <meta name="description" content="null在 JavaScript 中 null 表示什..."> 
+  <meta name="description" content="VsCode 配置 PHP 开发环境1.下载 php ..."> 
   
   <meta name="author" content="mu_lou_mu_di"> 
 
@@ -107,7 +107,7 @@
 
 <nav class="navbar">
   <div class="left"></div>
-  <div class="center">javascript中null和undefined的区别</div>
+  <div class="center">Vscode配置PHP开发环境</div>
   <div class="right">
     
       <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
@@ -164,27 +164,33 @@
     <section class="head">
   <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
   <div class="head-mask">
-    <h1 class="head-title">javascript中null和undefined的区别</h1>
+    <h1 class="head-title">Vscode配置PHP开发环境</h1>
     <div class="head-info">
-      <span class="post-info-item"><i class="iconfont iconcalendar"></i>October 27, 2020</span
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 23, 2020</span
         class="post-info-item">
       
-      <span class="post-info-item"><i class="iconfont iconfont-size"></i>623</span>
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>884</span>
     </div>
   </div>
 </section>
     <section class="main">
       <section class="content">
-        <h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。</p>
-<p>用 typeof 检测 null 返回的是 object。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">//值为 null(空), 但类型为对象</span></span><br></pre></td></tr></table></figure>
+        <h2 id="VsCode-配置-PHP-开发环境"><a href="#VsCode-配置-PHP-开发环境" class="headerlink" title="VsCode 配置 PHP 开发环境"></a>VsCode 配置 PHP 开发环境</h2><h3 id="1-下载-php-插件"><a href="#1-下载-php-插件" class="headerlink" title="1.下载 php 插件"></a>1.下载 php 插件</h3><ul>
+<li>PHP intelliSense</li>
+<li>PHP Debug</li>
+<li>PHP Extension Pack</li>
+<li>PHP Xdebug</li>
+</ul>
+<h3 id="2-指定-php-的路径：文件-gt-首选项-gt-设置"><a href="#2-指定-php-的路径：文件-gt-首选项-gt-设置" class="headerlink" title="2.指定 php 的路径：文件-&gt;首选项-&gt;设置"></a>2.指定 php 的路径：文件-&gt;首选项-&gt;设置</h3><p><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20200408143150318.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1F1ZXN0X3NlYw==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>在 setting.json”中编辑：把 php.exe 路径写下来：</p>
+<p><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20200408143332333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1F1ZXN0X3NlYw==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<h3 id="3-调试"><a href="#3-调试" class="headerlink" title="3.调试"></a>3.调试</h3><p>1.先打开 php 文件，在指定行按 F9 设置断点。注意：一定要以打开文件夹的形式才能成功设置断点调试，单个文件无效。 2.点击齿轮，选择 php–&gt;选择 listen for xdebug：</p>
+<p><img   class="lazyload" data-original="https://img-blog.csdnimg.cn/20200408144310137.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L1F1ZXN0X3NlYw==,size_16,color_FFFFFF,t_70" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg==" ></p>
+<p>配置 launch.json</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="comment">// 使用 IntelliSense 了解相关属性。</span></span><br><span class="line">  <span class="comment">// 悬停以查看现有属性的描述。</span></span><br><span class="line">  <span class="comment">// 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387</span></span><br><span class="line">  <span class="attr">&quot;version&quot;</span>: <span class="string">&quot;0.2.0&quot;</span>,</span><br><span class="line">  <span class="attr">&quot;configurations&quot;</span>: [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">&quot;name&quot;</span>: <span class="string">&quot;Listen for XDebug&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;type&quot;</span>: <span class="string">&quot;php&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;request&quot;</span>: <span class="string">&quot;launch&quot;</span>,</span><br><span class="line">      <span class="attr">&quot;port&quot;</span>: <span class="number">9000</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3><p>在 JavaScript 中, <strong>undefined</strong> 是一个没有设置值的变量。</p>
-<p><strong>typeof</strong> 一个没有值的变量会返回 <strong>undefined</strong>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line"><span class="comment">//任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined。</span></span><br><span class="line">person = <span class="literal">undefined</span>; <span class="comment">// 值为 undefined, 类型是undefined</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h3><p>null 和 undefined 的值相等，但类型不等：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+<p>测试配置是否正确，可以在 cmd 窗口，执行 netstat -an 看本机是否有监听 9000 端口。</p>
+<p>原文来自<a target="_blank" rel="noopener" href="https://blog.csdn.net/quest_sec/article/details/105386550?utm_medium=distribute.pc_relevant.none-task-blog-title-10&amp;spm=1001.2101.3001.4242">https://blog.csdn.net/quest_sec/article/details/105386550?utm_medium=distribute.pc_relevant.none-task-blog-title-10&amp;spm=1001.2101.3001.4242</a></p>
 
       </section>
       <section class="extra">
@@ -192,7 +198,7 @@
         <ul class="copyright">
   
   <li><strong>本文作者：</strong>mu_lou_mu_di</li>
-  <li><strong>本文链接：</strong><a href="http://example.com/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/index.html">http://example.com/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/index.html</a></li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2020/12/23/VsCode%E9%85%8D%E7%BD%AEPHP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html">http://example.com/2020/12/23/VsCode%E9%85%8D%E7%BD%AEPHP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/index.html</a></li>
   <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
       rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
   
@@ -203,10 +209,10 @@
         
 <nav class="nav">
   
-    <a href="/2020/10/27/Symbol%E7%9A%84%E7%89%B9%E6%80%A7/"><i class="iconfont iconleft"></i>JavaScript的Symbol特性</a>
+    <a href="/2020/12/23/PHP%E5%8F%98%E9%87%8F/"><i class="iconfont iconleft"></i></a>
   
   
-    <a href="/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">JavaScript数据类型<i class="iconfont iconright"></i></a>
+    <a href="/2020/12/23/rem/">rem配适<i class="iconfont iconright"></i></a>
   
 </nav>
 
