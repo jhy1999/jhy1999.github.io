@@ -1,0 +1,395 @@
+
+
+<!DOCTYPE html>
+<html lang="en" color-mode=light>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>地区三级联动选择 - 所有不能打倒我的，都将使我更强大！</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="google" content="notranslate" />
+
+  
+  
+  <meta name="description" content="Vue 的 vant 库实现首先引入一个 aera.j..."> 
+  
+  <meta name="author" content="mu_lou_mu_di"> 
+
+  
+    <link rel="icon" href="/images/icons/favicon-16x16.png" type="image/png" sizes="16x16">
+  
+  
+    <link rel="icon" href="/images/icons/favicon-32x32.png" type="image/png" sizes="32x32">
+  
+  
+    <link rel="apple-touch-icon" href="/images/icons/apple-touch-icon.png" sizes="180x180">
+  
+  
+    <meta rel="mask-icon" href="/images/icons/stun-logo.svg" color="#333333">
+  
+  
+    <meta rel="msapplication-TileImage" content="/images/icons/favicon-144x144.png">
+    <meta rel="msapplication-TileColor" content="#000000">
+  
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+  
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1445822_onl0g0h21np.css">
+
+  
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
+  
+
+  
+  
+  
+<link rel="stylesheet" href="https://cdn.bootcss.com/highlight.js/9.18.1/styles/xcode.min.css">
+
+  
+
+  <script>
+    var CONFIG = window.CONFIG || {};
+    var ZHAOO = window.ZHAOO || {};
+    CONFIG = {
+      isHome: false,
+      fancybox: true,
+      pjax: false,
+      lazyload: {
+        enable: true,
+        onlyPost: 'false',
+        loading: '/images/theme/loading.gif'
+      },
+      donate: {
+        enable: false,
+        alipay: '',
+        wechat: ''
+      },
+      motto: {
+        api: '',
+        default: '且随疾风而行！'
+      },
+      galleries: {
+        enable: true
+      },
+      fab: {
+        enable: true,
+        alwaysShow: false
+      },
+      carrier: {
+        enable: true
+      },
+      daovoice: {
+        enable: true
+      }
+    }
+  </script>
+
+  
+
+  
+<meta name="generator" content="Hexo 5.2.0"></head>
+<body class="lock-screen">
+  <div class="loading"></div>
+  
+
+
+<nav class="navbar">
+  <div class="left"></div>
+  <div class="center">地区三级联动选择</div>
+  <div class="right">
+    
+      <i class="iconfont iconmoono" id="color-toggle" color-toggle="light"></i>
+    
+    <i class="iconfont iconmenu j-navbar-menu"></i>
+  </div>
+</nav>
+
+  <nav class="menu">
+  <div class="menu-wrap">
+    <div class="menu-close">
+      <i class="iconfont iconbaseline-close-px"></i>
+    </div>
+    <ul class="menu-content">
+      
+      
+      
+      
+      <li class="menu-item"><a href="/ " class="underline"> 首页</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/galleries " class="underline"> 摄影</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/archives " class="underline"> 归档</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/tags " class="underline"> 标签</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/categories " class="underline"> 分类</a></li>
+      
+      
+      
+      
+      <li class="menu-item"><a href="/about " class="underline"> 关于</a></li>
+      
+    </ul>
+    <div class="menu-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+  </div>
+</nav>
+  <main id="main">
+  <div class="container" id="container">
+    <article class="article">
+  <div class="wrap">
+    <section class="head">
+  <img   class="lazyload" data-original="/images/theme/post-image.jpg" src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQImWNgYGBgAAAABQABh6FO1AAAAABJRU5ErkJggg=="  draggable="false">
+  <div class="head-mask">
+    <h1 class="head-title">地区三级联动选择</h1>
+    <div class="head-info">
+      <span class="post-info-item"><i class="iconfont iconcalendar"></i>December 05, 2020</span
+        class="post-info-item">
+      
+      <span class="post-info-item"><i class="iconfont iconfont-size"></i>8893</span>
+    </div>
+  </div>
+</section>
+    <section class="main">
+      <section class="content">
+        <h1 id="Vue-的-vant-库实现"><a href="#Vue-的-vant-库实现" class="headerlink" title="Vue 的 vant 库实现"></a>Vue 的 vant 库实现</h1><h4 id="首先引入一个-aera-js-文件"><a href="#首先引入一个-aera-js-文件" class="headerlink" title="首先引入一个 aera.js 文件"></a>首先引入一个 aera.js 文件</h4><p>这里是我放在 gitee 的一个 area.js <a target="_blank" rel="noopener" href="https://gitee.com/mu_lou_mu_di/area">area.js</a></p>
+<h4 id="其次在需要使用的组件中使用"><a href="#其次在需要使用的组件中使用" class="headerlink" title="其次在需要使用的组件中使用"></a>其次在需要使用的组件中使用</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; areaList &#125; <span class="keyword">from</span> <span class="string">&quot;../../utils/Area&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>这里我使用的 Vue 的 vant 中的 van-area 所以在需要的组件中引入</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> &#123; Area &#125; <span class="keyword">from</span> <span class="string">&quot;vant&quot;</span>;</span><br></pre></td></tr></table></figure>
+
+<p>下面就可以直接使用了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">    &lt;van-area title=<span class="string">&quot;&quot;</span></span><br><span class="line">    :columns-num=<span class="string">&quot;3&quot;</span></span><br><span class="line">    :area-list=<span class="string">&quot;areaList&quot;</span></span><br><span class="line">    /&gt;</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> &#123; Area &#125; <span class="keyword">from</span> <span class="string">&quot;vant&quot;</span>;</span><br><span class="line"><span class="keyword">import</span> &#123; areaList &#125; <span class="keyword">from</span> <span class="string">&#x27;../../utils/Area&#x27;</span>;</span><br><span class="line"><span class="keyword">export</span> <span class="keyword">default</span> &#123;</span><br><span class="line">  compontents:&#123;</span><br><span class="line">    [Area.name]: Area,</span><br><span class="line">  &#125;,</span><br><span class="line">  <span class="function"><span class="title">data</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">return</span>&#123;</span><br><span class="line">      areaList</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>关于 van-area 的使用请参考 <a target="_blank" rel="noopener" href="https://vant-contrib.gitee.io/vant/#/zh-CN/area">van-area</a></p>
+<h1 id="原生-JavaScript-实现"><a href="#原生-JavaScript-实现" class="headerlink" title="原生 JavaScript 实现"></a>原生 JavaScript 实现</h1><p>html:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html lang=<span class="string">&quot;en&quot;</span>&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">    &lt;meta charset=<span class="string">&quot;UTF-8&quot;</span>&gt;</span><br><span class="line">    &lt;meta name=<span class="string">&quot;viewport&quot;</span> content=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span><br><span class="line">    &lt;meta http-equiv=<span class="string">&quot;X-UA-Compatible&quot;</span> content=<span class="string">&quot;ie=edge&quot;</span>&gt;</span><br><span class="line">    &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">    &lt;div id=<span class="string">&quot;area&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;./js/city.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script src=<span class="string">&quot;./js/method.js&quot;</span>&gt;&lt;/script&gt;</span><br><span class="line">    &lt;script&gt;</span><br><span class="line">        <span class="keyword">var</span> select = <span class="keyword">new</span> YxAreaSelect(&#123;</span><br><span class="line">            elem:<span class="string">&#x27;#area&#x27;</span>,</span><br><span class="line">            mode:<span class="string">&#x27;code&#x27;</span>,</span><br><span class="line">            defProvince:<span class="string">&#x27;370000&#x27;</span>,</span><br><span class="line">            defCity:<span class="string">&#x27;370100&#x27;</span>,</span><br><span class="line">            defArea:<span class="string">&#x27;370112&#x27;</span>,</span><br><span class="line">            provinceName:<span class="string">&#x27;province&#x27;</span>,</span><br><span class="line">            cityName:<span class="string">&#x27;city&#x27;</span>,</span><br><span class="line">            areaName:<span class="string">&#x27;area&#x27;</span></span><br><span class="line">        &#125;);</span><br><span class="line">    &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>js:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">YxAreaSelect</span> </span>&#123;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 构造函数,创建select</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;启动参数&#125;</span> <span class="variable">option</span></span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">constructor</span>(<span class="params">option</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> option == <span class="string">&quot;undefined&quot;</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="string">&quot;YxAreaSelect Setting Is Not Found&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">typeof</span> option != <span class="string">&quot;object&quot;</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="string">&quot;YxAreaSelect Setting Is Not Object&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">this</span>.settingConfig(option);</span><br><span class="line">    <span class="built_in">document</span>.querySelector(</span><br><span class="line">      <span class="built_in">this</span>.setting.elem</span><br><span class="line">    ).innerHTML = <span class="built_in">this</span>.createSelectBody();</span><br><span class="line">    <span class="keyword">let</span> provinceDom = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.yx-area-select-province&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> cityDom = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.yx-area-select-city&quot;</span>);</span><br><span class="line">    <span class="keyword">let</span> areaDom = <span class="built_in">document</span>.querySelector(<span class="string">&quot;.yx-area-select-area&quot;</span>);</span><br><span class="line">    <span class="built_in">this</span>.provinceDom = provinceDom;</span><br><span class="line">    <span class="built_in">this</span>.cityDom = cityDom;</span><br><span class="line">    <span class="built_in">this</span>.areaDom = areaDom;</span><br><span class="line">    <span class="comment">//省被选择,重画市和区的内容</span></span><br><span class="line">    provinceDom.addEventListener(<span class="string">&quot;change&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      cityDom.innerHTML = <span class="built_in">this</span>.createBody(<span class="built_in">this</span>.getDomCode(provinceDom));</span><br><span class="line">      areaDom.innerHTML = <span class="built_in">this</span>.createBody(<span class="built_in">this</span>.getDomCode(cityDom));</span><br><span class="line">    &#125;);</span><br><span class="line">    cityDom.addEventListener(<span class="string">&quot;change&quot;</span>, <span class="function">() =&gt;</span> &#123;</span><br><span class="line">      areaDom.innerHTML = <span class="built_in">this</span>.createBody(<span class="built_in">this</span>.getDomCode(cityDom));</span><br><span class="line">    &#125;);</span><br><span class="line">    <span class="comment">//处理默认值,</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defProvince.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 获取dom的code值</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">getDomCode</span>(<span class="params">dom</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> index = dom.selectedIndex;</span><br><span class="line">    <span class="keyword">let</span> code = dom.options[index].getAttribute(<span class="string">&quot;data-code&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> code;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * value</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">getDomValue</span>(<span class="params">dom</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> index = dom.selectedIndex;</span><br><span class="line">    <span class="keyword">let</span> code = dom.options[index].getAttribute(<span class="string">&quot;data-value&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> code;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 根据编码创建option</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;省份编码&#125;</span> <span class="variable">code</span></span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">createBody</span>(<span class="params">code</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> jsonData = AREADATA[code];</span><br><span class="line">    <span class="keyword">let</span> html = <span class="string">`&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> jsonData) &#123;</span><br><span class="line">      html += <span class="string">`&lt;option data-code=&#x27;<span class="subst">$&#123;key&#125;</span>&#x27; data-value=&#x27;<span class="subst">$&#123;jsonData[key]&#125;</span>&#x27;&gt;<span class="subst">$&#123;jsonData[key]&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> html;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 处理配置项,给配置项处理默认值</span></span><br><span class="line"><span class="comment">   * <span class="doctag">@param <span class="type">&#123;*&#125;</span> <span class="variable">option</span></span></span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">settingConfig</span>(<span class="params">option</span>)</span> &#123;</span><br><span class="line">    <span class="built_in">this</span>.setting = option;</span><br><span class="line">    <span class="comment">//mode 模式 取值 value,code</span></span><br><span class="line">    <span class="built_in">this</span>.setting.mode = option.mode || <span class="string">&quot;value&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.defProvince = option.defProvince || <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.defCity = option.defCity || <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.defArea = option.defArea || <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.defChoose = option.defChoose || <span class="string">&quot;请选择&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.provinceName = option.provinceName || <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.cityName = option.cityName || <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="built_in">this</span>.setting.areaName = option.areaName || <span class="string">&quot;&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">getProvince</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.setting.mode == <span class="string">&quot;value&quot;</span></span><br><span class="line">      ? <span class="built_in">this</span>.getDomValue(<span class="built_in">this</span>.provinceDom)</span><br><span class="line">      : <span class="built_in">this</span>.getDomCode(<span class="built_in">this</span>.provinceDom);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">getCity</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.setting.mode == <span class="string">&quot;value&quot;</span></span><br><span class="line">      ? <span class="built_in">this</span>.getDomValue(<span class="built_in">this</span>.cityDom)</span><br><span class="line">      : <span class="built_in">this</span>.getDomCode(<span class="built_in">this</span>.cityDom);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="function"><span class="title">getArea</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">this</span>.setting.mode == <span class="string">&quot;value&quot;</span></span><br><span class="line">      ? <span class="built_in">this</span>.getDomValue(<span class="built_in">this</span>.areaDom)</span><br><span class="line">      : <span class="built_in">this</span>.getDomCode(<span class="built_in">this</span>.areaDom);</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="comment">/**</span></span><br><span class="line"><span class="comment">   * 创建选择框html</span></span><br><span class="line"><span class="comment">   */</span></span><br><span class="line">  <span class="function"><span class="title">createSelectBody</span>(<span class="params"></span>)</span> &#123;</span><br><span class="line">    <span class="keyword">let</span> html = <span class="string">&quot;&quot;</span>;</span><br><span class="line">    <span class="keyword">let</span> province = <span class="string">`&lt;select name=&#x27;<span class="subst">$&#123;<span class="built_in">this</span>.setting.provinceName&#125;</span>&#x27; class=&#x27;yx-area-select-province&#x27;&gt;&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">    <span class="keyword">let</span> data = AREADATA[<span class="number">100000</span>];</span><br><span class="line">    <span class="keyword">let</span> defProvinceCode;</span><br><span class="line">    <span class="keyword">let</span> defCityCode;</span><br><span class="line">    <span class="keyword">let</span> defAreaCode;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) &#123;</span><br><span class="line">      <span class="keyword">let</span> selected = <span class="string">&quot;&quot;</span>;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defProvince.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (</span><br><span class="line">          <span class="built_in">this</span>.setting.mode === <span class="string">&quot;value&quot;</span> &amp;&amp;</span><br><span class="line">          <span class="built_in">this</span>.setting.defProvince == data[key]</span><br><span class="line">        ) &#123;</span><br><span class="line">          selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">          defProvinceCode = key;</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defProvince == key) &#123;</span><br><span class="line">          selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">          defProvinceCode = key;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      province += <span class="string">`&lt;option data-code=&#x27;<span class="subst">$&#123;key&#125;</span>&#x27; <span class="subst">$&#123;selected&#125;</span> data-value=&#x27;<span class="subst">$&#123;data[key]&#125;</span>&#x27;&gt;<span class="subst">$&#123;data[key]&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    province += <span class="string">&quot;&lt;/select&gt;&quot;</span>;</span><br><span class="line">    <span class="keyword">let</span> city;</span><br><span class="line">    <span class="keyword">if</span> (defProvinceCode != <span class="literal">undefined</span>) &#123;</span><br><span class="line">      data = AREADATA[defProvinceCode];</span><br><span class="line">      city = <span class="string">`&lt;select name=&#x27;<span class="subst">$&#123;<span class="built_in">this</span>.setting.cityName&#125;</span>&#x27; class=&#x27;yx-area-select-city&#x27;&gt;&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) &#123;</span><br><span class="line">        <span class="keyword">let</span> selected = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defCity.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (</span><br><span class="line">            <span class="built_in">this</span>.setting.mode === <span class="string">&quot;value&quot;</span> &amp;&amp;</span><br><span class="line">            <span class="built_in">this</span>.setting.defCity == data[key]</span><br><span class="line">          ) &#123;</span><br><span class="line">            selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">            defCityCode = key;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defCity == key) &#123;</span><br><span class="line">            selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">            defCityCode = key;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        city += <span class="string">`&lt;option data-code=&#x27;<span class="subst">$&#123;key&#125;</span>&#x27; <span class="subst">$&#123;selected&#125;</span> data-value=&#x27;<span class="subst">$&#123;data[key]&#125;</span>&#x27;&gt;<span class="subst">$&#123;data[key]&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      city += <span class="string">&quot;&lt;/select&gt;&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      city = <span class="string">`&lt;select name=&#x27;<span class="subst">$&#123;<span class="built_in">this</span>.setting.cityName&#125;</span>&#x27; class=&#x27;yx-area-select-city&#x27;&gt;&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;&lt;/select&gt;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">let</span> area;</span><br><span class="line">    <span class="keyword">if</span> (defCityCode != <span class="literal">undefined</span>) &#123;</span><br><span class="line">      data = AREADATA[defCityCode];</span><br><span class="line">      area = <span class="string">`&lt;select name=&#x27;<span class="subst">$&#123;<span class="built_in">this</span>.setting.areaName&#125;</span>&#x27; class=&#x27;yx-area-select-area&#x27;&gt;&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">const</span> key <span class="keyword">in</span> data) &#123;</span><br><span class="line">        <span class="keyword">let</span> selected = <span class="string">&quot;&quot;</span>;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defArea.length &gt; <span class="number">0</span>) &#123;</span><br><span class="line">          <span class="keyword">if</span> (</span><br><span class="line">            <span class="built_in">this</span>.setting.mode === <span class="string">&quot;value&quot;</span> &amp;&amp;</span><br><span class="line">            <span class="built_in">this</span>.setting.defArea == data[key]</span><br><span class="line">          ) &#123;</span><br><span class="line">            selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">          &#125; <span class="keyword">else</span> <span class="keyword">if</span> (<span class="built_in">this</span>.setting.defArea == key) &#123;</span><br><span class="line">            selected = <span class="string">&quot;selected&quot;</span>;</span><br><span class="line">          &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        area += <span class="string">`&lt;option data-code=&#x27;<span class="subst">$&#123;key&#125;</span>&#x27; <span class="subst">$&#123;selected&#125;</span> data-value=&#x27;<span class="subst">$&#123;data[key]&#125;</span>&#x27;&gt;<span class="subst">$&#123;data[key]&#125;</span>&lt;/option&gt;`</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      area += <span class="string">&quot;&lt;/select&gt;&quot;</span>;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      area = <span class="string">`&lt;select name=&#x27;<span class="subst">$&#123;<span class="built_in">this</span>.setting.areaName&#125;</span>&#x27; class=&#x27;yx-area-select-city&#x27;&gt;&lt;option&gt;<span class="subst">$&#123;<span class="built_in">this</span>.setting.defChoose&#125;</span>&lt;/option&gt;&lt;/select&gt;`</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    html += province + city + area;</span><br><span class="line">    <span class="keyword">return</span> html;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用的 city.js 在 我的 git 地址下载<a target="_blank" rel="noopener" href="https://gitee.com/mu_lou_mu_di/area">city</a></p>
+
+      </section>
+      <section class="extra">
+        
+        <ul class="copyright">
+  
+  <li><strong>本文作者：</strong>mu_lou_mu_di</li>
+  <li><strong>本文链接：</strong><a href="http://example.com/2020/12/05/%E5%9C%B0%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%E9%80%89%E6%8B%A9/index.html">http://example.com/2020/12/05/%E5%9C%B0%E5%8C%BA%E4%B8%89%E7%BA%A7%E8%81%94%E5%8A%A8%E9%80%89%E6%8B%A9/index.html</a></li>
+  <li><strong>版权声明：</strong>本博客所有文章均采用<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"
+      rel="external nofollow" target="_blank"> BY-NC-SA </a>许可协议，转载请注明出处！</li>
+  
+</ul>
+        
+        
+        
+        
+<nav class="nav">
+  
+    <a href="/2020/12/05/%E5%85%B3%E4%BA%8EJavaScript%E4%B8%AD%E7%9A%84%E4%B8%89%E4%B8%AA%E7%82%B9/"><i class="iconfont iconleft"></i>关于JS中的三个点(...)</a>
+  
+  
+    <a href="/2020/11/02/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95%E9%A2%98/">前端面试题<i class="iconfont iconright"></i></a>
+  
+</nav>
+
+      </section>
+      
+      <section class="comments">
+  
+  <div class="btn" id="comments-btn">查看评论</div>
+  
+  
+</section>
+      
+    </section>
+  </div>
+</article>
+  </div>
+</main>
+  <footer class="footer">
+  <div class="footer-social">
+    
+    
+    
+    
+    
+    <a href="tencent://message/?Menu=yes&uin=894519210 " target="_blank" onMouseOver="this.style.color= '#12B7F5'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconQQ "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="javascript:; " target="_blank" onMouseOver="this.style.color= '#09BB07'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconwechat-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://www.instagram.com/izhaoo/ " target="_blank" onMouseOver="this.style.color= '#DA2E76'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconinstagram "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="https://github.com/izhaoo " target="_blank" onMouseOver="this.style.color= '#24292E'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  icongithub-fill "></i>
+    </a>
+    
+    
+    
+    
+    
+    <a href="mailto:izhaoo@163.com " target="_blank" onMouseOver="this.style.color='#FFBE5B'"
+      onMouseOut="this.style.color='#33333D'">
+      <i class="iconfont footer-social-item  iconmail"></i>
+    </a>
+    
+  </div>
+  <div class="footer-copyright"><p>Powered by <a target="_blank" href="https://hexo.io">Hexo</a>  |  Theme - <a target="_blank" href="https://github.com/izhaoo/hexo-theme-zhaoo">zhaoo</a></p></div>
+</footer>
+  
+      <div class="fab fab-plus">
+    <i class="iconfont iconplus"></i>
+  </div>
+  
+  <div class="fab fab-daovoice">
+    <i class="iconfont iconcomment"></i>
+  </div>
+  
+  <div class="fab fab-up">
+    <i class="iconfont iconcaret-up"></i>
+  </div>
+  
+  
+    
+<script src="/js/color-mode.js"></script>
+
+  
+</body>
+
+
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdn.bootcdn.net/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js"></script>
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+
+
+
+
+
+
+<script src="/js/utils.js"></script>
+<script src="/js/modules.js"></script>
+<script src="/js/zui.js"></script>
+<script src="/js/script.js"></script>
+
+
+
+
+
+<script>
+  (function (i, s, o, g, r, a, m) {
+    i["DaoVoiceObject"] = r;
+    i[r] = i[r] || function () {
+      (i[r].q = i[r].q || []).push(arguments)
+    }, i[r].l = 1 * new Date();
+    a = s.createElement(o), m = s.getElementsByTagName(o)[0];
+    a.async = 1;
+    a.src = g;
+    a.charset = "utf-8";
+    m.parentNode.insertBefore(a, m)
+  })(window, document, "script", ('https:' == document.location.protocol ? 'https:' : 'http:') +
+    "//widget.daovoice.io/widget/0f81ff2f.js", "daovoice")
+  daovoice('init', {
+    app_id: "abcdefg"
+  }, {
+    launcher: {
+      disableLauncherIcon: true,
+    },
+  });
+  daovoice('update');
+</script>
+
+
+
+<script>
+  (function () {
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    } else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+
+
+<script>
+  var _hmt = _hmt || [];
+  (function () {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?4c204d8bc027a0455b5fc642ac334ca8";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+</script>
+
+
+
+
+
+
+
+
+
+
+</html>
