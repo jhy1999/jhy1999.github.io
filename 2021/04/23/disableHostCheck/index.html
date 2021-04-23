@@ -5,17 +5,17 @@
   
 
   
-  <title>rem配适 | 所有不能打倒我的，都将使我更强大！</title>
+  <title>disableHostCheck | 所有不能打倒我的，都将使我更强大！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="rem 配适123456789101112131415(function (doc, win) &amp;#123;  var docEl &#x3D; doc.documentElement,    &#x2F;&#x2F; 判断window中是否有orientationchange方法    resizeEvt &#x3D; &quot;orientationchange&quot; in window ? &quot;orientatio">
+  <meta name="description" content="disableHostCheck 配置devServer.disableHostCheck 配置项用于配置是否关闭用于 DNS 重绑定的 HTTP 请求的 HOST 检查。 DevServer 默认只接受来自本地的请求，关闭后可以接受来自任何 HOST 的请求。 它通常用于搭配–host 0.0.0.0 使用，因为你想要其它设备访问你本地的服务，但访问时是直接通过 IP 地址访问而不是 HOST">
 <meta property="og:type" content="article">
-<meta property="og:title" content="rem配适">
-<meta property="og:url" content="http://example.com/2020/12/23/rem/index.html">
+<meta property="og:title" content="disableHostCheck">
+<meta property="og:url" content="http://example.com/2021/04/23/disableHostCheck/index.html">
 <meta property="og:site_name" content="所有不能打倒我的，都将使我更强大！">
-<meta property="og:description" content="rem 配适123456789101112131415(function (doc, win) &amp;#123;  var docEl &#x3D; doc.documentElement,    &#x2F;&#x2F; 判断window中是否有orientationchange方法    resizeEvt &#x3D; &quot;orientationchange&quot; in window ? &quot;orientatio">
+<meta property="og:description" content="disableHostCheck 配置devServer.disableHostCheck 配置项用于配置是否关闭用于 DNS 重绑定的 HTTP 请求的 HOST 检查。 DevServer 默认只接受来自本地的请求，关闭后可以接受来自任何 HOST 的请求。 它通常用于搭配–host 0.0.0.0 使用，因为你想要其它设备访问你本地的服务，但访问时是直接通过 IP 地址访问而不是 HOST">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-12-23T14:01:52.524Z">
-<meta property="article:modified_time" content="2020-12-23T14:06:27.873Z">
+<meta property="article:published_time" content="2021-04-23T02:04:19.502Z">
+<meta property="article:modified_time" content="2021-04-23T02:06:03.292Z">
 <meta property="article:author" content="mu_lou_mu_di">
 <meta name="twitter:card" content="summary">
   
@@ -66,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-rem" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-disableHostCheck" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/12/23/rem/" class="article-date">
-  <time datetime="2020-12-23T14:01:52.524Z" itemprop="datePublished">2020-12-23</time>
+    <a href="/2021/04/23/disableHostCheck/" class="article-date">
+  <time datetime="2021-04-23T02:04:19.502Z" itemprop="datePublished">2021-04-23</time>
 </a>
     
   </div>
@@ -80,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      rem配适
+      disableHostCheck
     </h1>
   
 
@@ -88,12 +88,12 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="rem-配适"><a href="#rem-配适" class="headerlink" title="rem 配适"></a>rem 配适</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span> (<span class="params">doc, win</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">var</span> docEl = doc.documentElement,</span><br><span class="line">    <span class="comment">// 判断window中是否有orientationchange方法</span></span><br><span class="line">    resizeEvt = <span class="string">&quot;orientationchange&quot;</span> <span class="keyword">in</span> <span class="built_in">window</span> ? <span class="string">&quot;orientationchange&quot;</span> : <span class="string">&quot;resize&quot;</span>,</span><br><span class="line">    recalc = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="keyword">var</span> clientWidth = docEl.clientWidth;</span><br><span class="line">      <span class="keyword">if</span> (!clientWidth) <span class="keyword">return</span>;</span><br><span class="line">      <span class="comment">//设置基础html的fontsize</span></span><br><span class="line">      docEl.style.fontSize = <span class="number">100</span> * (clientWidth / <span class="number">750</span>) + <span class="string">&quot;px&quot;</span>;</span><br><span class="line">      <span class="comment">//750为ui设计稿的宽度，100为根元素font-size</span></span><br><span class="line">    &#125;;</span><br><span class="line">  <span class="keyword">if</span> (!doc.addEventListener) <span class="keyword">return</span>;</span><br><span class="line">  win.addEventListener(resizeEvt, recalc, <span class="literal">false</span>);</span><br><span class="line">  doc.addEventListener(<span class="string">&quot;DOMContentLoaded&quot;</span>, recalc, <span class="literal">false</span>);</span><br><span class="line">&#125;)(<span class="built_in">document</span>, <span class="built_in">window</span>);</span><br></pre></td></tr></table></figure>
+        <h1 id="disableHostCheck-配置"><a href="#disableHostCheck-配置" class="headerlink" title="disableHostCheck 配置"></a>disableHostCheck 配置</h1><p>devServer.disableHostCheck 配置项用于配置是否关闭用于 DNS 重绑定的 HTTP 请求的 HOST 检查。 DevServer 默认只接受来自本地的请求，关闭后可以接受来自任何 HOST 的请求。 它通常用于搭配–host 0.0.0.0 使用，因为你想要其它设备访问你本地的服务，但访问时是直接通过 IP 地址访问而不是 HOST 访问，所以需要关闭 HOST 检查</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2020/12/23/rem/" data-id="ckj1hmeq70005ygv1ahjzhqj0" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2021/04/23/disableHostCheck/" data-id="ckntoa0840000ccv1hh9r7xsy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -102,19 +102,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/12/23/VsCode%E9%85%8D%E7%BD%AEPHP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Vscode配置PHP开发环境
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/12/23/Jquery%E6%95%88%E6%9E%9C/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2021/04/23/CRC8%E9%AA%8C%E6%A0%A1%E7%AE%97%E6%B3%95/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">JQuery效果</div>
+      <div class="article-nav-title">CRC8校验算法</div>
     </a>
   
 </nav>

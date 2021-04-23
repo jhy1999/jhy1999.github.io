@@ -5,17 +5,15 @@
   
 
   
-  <title>JavaScript数据类型 | 所有不能打倒我的，都将使我更强大！</title>
+  <title>所有不能打倒我的，都将使我更强大！</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="JavaScript 数据类型在 JavaScript 中有 6 种不同的数据类型: string  number  boolean  object  function  symbol   三种对象类型: Object  Date  Array   两个不包含任何值的数据类型: null undefined  typeof 操作符可以使用 typeof 操作符来查看 JavaScript 变量的数">
-<meta property="og:type" content="article">
-<meta property="og:title" content="JavaScript数据类型">
-<meta property="og:url" content="http://example.com/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/index.html">
+  <meta name="description" content="这是mu_lou_mu_di的博客">
+<meta property="og:type" content="website">
+<meta property="og:title" content="所有不能打倒我的，都将使我更强大！">
+<meta property="og:url" content="http://example.com/page/3/index.html">
 <meta property="og:site_name" content="所有不能打倒我的，都将使我更强大！">
-<meta property="og:description" content="JavaScript 数据类型在 JavaScript 中有 6 种不同的数据类型: string  number  boolean  object  function  symbol   三种对象类型: Object  Date  Array   两个不包含任何值的数据类型: null undefined  typeof 操作符可以使用 typeof 操作符来查看 JavaScript 变量的数">
+<meta property="og:description" content="这是mu_lou_mu_di的博客">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-10-27T04:03:39.166Z">
-<meta property="article:modified_time" content="2020-10-27T07:46:29.585Z">
 <meta property="article:author" content="mu_lou_mu_di">
 <meta name="twitter:card" content="summary">
   
@@ -66,7 +64,55 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-JavaScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main">
+  
+    <article id="post-javascript中null和undefined的区别" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/" class="article-date">
+  <time datetime="2020-10-27T04:17:35.281Z" itemprop="datePublished">2020-10-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/">javascript中null和undefined的区别</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。</p>
+<p>用 typeof 检测 null 返回的是 object。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">//值为 null(空), 但类型为对象</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3><p>在 JavaScript 中, <strong>undefined</strong> 是一个没有设置值的变量。</p>
+<p><strong>typeof</strong> 一个没有值的变量会返回 <strong>undefined</strong>。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line"><span class="comment">//任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined。</span></span><br><span class="line">person = <span class="literal">undefined</span>; <span class="comment">// 值为 undefined, 类型是undefined</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h3><p>null 和 undefined 的值相等，但类型不等：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/" data-id="ckgx2sbiw0003ekv1bqby118j" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
   <time datetime="2020-10-27T04:03:39.166Z" itemprop="datePublished">2020-10-27</time>
@@ -79,8 +125,8 @@
       <header class="article-header">
         
   
-    <h1 class="article-title" itemprop="name">
-      JavaScript数据类型
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">JavaScript数据类型</a>
     </h1>
   
 
@@ -148,23 +194,16 @@
     </footer>
   </div>
   
-    
-<nav id="article-nav">
-  
-    <a href="/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          javascript中null和undefined的区别
-        
-      </div>
-    </a>
-  
-  
-</nav>
+</article>
+
 
   
-</article>
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
 
 </section>
         

@@ -66,6 +66,274 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Jquery效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/23/Jquery%E6%95%88%E6%9E%9C/" class="article-date">
+  <time datetime="2020-12-23T14:01:52.477Z" itemprop="datePublished">2020-12-23</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/23/Jquery%E6%95%88%E6%9E%9C/">JQuery效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="jQuery-隐藏和显示"><a href="#jQuery-隐藏和显示" class="headerlink" title="jQuery 隐藏和显示"></a>jQuery 隐藏和显示</h3><h4 id="jQuery-hide-和-show"><a href="#jQuery-hide-和-show" class="headerlink" title="jQuery hide() 和 show()"></a>jQuery hide() 和 show()</h4><p>语法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(selector).hide(speed, callback);</span><br><span class="line"></span><br><span class="line">$(selector).show(speed, callback);</span><br></pre></td></tr></table></figure>
+
+<p>可选的 speed 参数规定隐藏/显示的速度，可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是隐藏或显示完成后所执行的函数名称。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>隐藏<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;p&quot;</span>).hide(<span class="number">1000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;p标签被隐藏&quot;</span>);</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="jQuery-toggle"><a href="#jQuery-toggle" class="headerlink" title="jQuery toggle()"></a>jQuery toggle()</h4><p>语法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).toggle(speed, callback);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	<span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>点击隐藏/显示<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">	$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	  $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">	  $(<span class="string">&quot;p&quot;</span>).toggle(<span class="number">1000</span>,<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span><br><span class="line"><span class="javascript">		  <span class="built_in">console</span>.log(<span class="string">&quot;p标签&quot;</span>)</span></span><br><span class="line">	  &#125;);</span><br><span class="line">	  &#125;);</span><br><span class="line">	&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery-淡入淡出"><a href="#jQuery-淡入淡出" class="headerlink" title="jQuery 淡入淡出"></a>jQuery 淡入淡出</h3><p>通过 Jquery 可以实现元素淡入淡出效果，Jquery 有下面 4 种方法:</p>
+<blockquote>
+<p>fadein()</p>
+<p>fadeout()</p>
+<p>fadeToggle()</p>
+<p>fadeTo()</p>
+</blockquote>
+<p>语法:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(selector).fading(speed, callback);</span><br></pre></td></tr></table></figure>
+
+<p>可选的 speed 参数规定效果的时长。它可以取以下值：”slow”、”fast” 或毫秒。</p>
+<p>可选的 callback 参数是 fading 完成后所执行的函数名称</p>
+<h4 id="fadeIn-方法"><a href="#fadeIn-方法" class="headerlink" title="fadeIn() 方法"></a>fadeIn() 方法</h4><p>fadeIn() 用于淡入已隐藏的元素</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>点击淡入/淡出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">style</span>=<span class="string">&quot;display: none;&quot;</span>&gt;</span>这是另一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;p&quot;</span>).fadeIn(<span class="number">1000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;p标签淡入淡出&quot;</span>);</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="fadeOut-方法"><a href="#fadeOut-方法" class="headerlink" title="fadeOut() 方法"></a>fadeOut() 方法</h4><p>fadeOut() 方法用于淡出可见元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span> <span class="attr">type</span>=<span class="string">&quot;button&quot;</span>&gt;</span>点击淡入/淡出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>这是另一个段落。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;p&quot;</span>).fadeOut(<span class="number">1000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">        <span class="built_in">console</span>.log(<span class="string">&quot;p标签淡入淡出&quot;</span>);</span></span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="fadeToggle-方法"><a href="#fadeToggle-方法" class="headerlink" title="fadeToggle 方法"></a>fadeToggle 方法</h4><p>fadeToggle() 方法可以在 fadeIn() 与 fadeOut() 方法之间进行切换。</p>
+<p>如果元素已淡出，则 fadeToggle() 会向元素添加淡入效果。</p>
+<p>如果元素已淡入，则 fadeToggle() 会向元素添加淡出效果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">  $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    $(<span class="string">&quot;p&quot;</span>).fadeToggle(<span class="number">1000</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">console</span>.log(<span class="string">&quot;p标签淡入淡出&quot;</span>);</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="fadeTo-方法"><a href="#fadeTo-方法" class="headerlink" title="fadeTo() 方法"></a>fadeTo() 方法</h4><p>fadeTo() 方法允许渐变为给定的不透明度（值介于 0 与 1 之间）。</p>
+<p>fadeTo() 方法中必需的 opacity 参数将淡入淡出效果设置为给定的不透明度</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span>&gt;</span>演示带有不同参数的 fadeTo() 方法。<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">button</span>&gt;</span>点击这里，使三个矩形淡出<span class="tag">&lt;/<span class="name">button</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span> /&gt;</span><span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div1&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:80px;height:80px;background-color:red;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div2&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:80px;height:80px;background-color:green;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">br</span> /&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">&quot;div3&quot;</span> <span class="attr">style</span>=<span class="string">&quot;width:80px;height:80px;background-color:blue;&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;button&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;#div1&quot;</span>).fadeTo(<span class="string">&quot;slow&quot;</span>, <span class="number">0.15</span>);</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;#div2&quot;</span>).fadeTo(<span class="string">&quot;slow&quot;</span>, <span class="number">0.4</span>);</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;#div3&quot;</span>).fadeTo(<span class="string">&quot;slow&quot;</span>, <span class="number">0.7</span>);</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery-滑动"><a href="#jQuery-滑动" class="headerlink" title="jQuery 滑动"></a>jQuery 滑动</h3><p>通过 jQuery，可以在元素上创建滑动效果。</p>
+<h4 id="slideDown-方法"><a href="#slideDown-方法" class="headerlink" title="slideDown() 方法"></a>slideDown() 方法</h4><p>slideDown() 方法用于向下滑动元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;panel&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哈哈哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>红红火火恍恍惚惚<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;flip&quot;</span>&gt;</span>请点击这里<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.panel&quot;</span>).css(<span class="string">&quot;display&quot;</span>, <span class="string">&quot;none&quot;</span>);</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.flip&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;.panel&quot;</span>).slideDown(<span class="string">&quot;slow&quot;</span>);</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="slideUp-方法"><a href="#slideUp-方法" class="headerlink" title="slideUp()方法"></a>slideUp()方法</h4><p>slideUp() 方法用于向上滑动元素。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;panel&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哈哈哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>红红火火恍恍惚惚<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;flip&quot;</span>&gt;</span>请点击这里<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.flip&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;.panel&quot;</span>).slideUp(<span class="string">&quot;slow&quot;</span>);</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="slideToggle-方法"><a href="#slideToggle-方法" class="headerlink" title="slideToggle() 方法"></a>slideToggle() 方法</h4><p>slideToggle() 方法可以在 slideDown() 与 slideUp() 方法之间进行切换。</p>
+<p>如果元素向下滑动，则 slideToggle() 可向上滑动它们。</p>
+<p>如果元素向上滑动，则 slideToggle() 可向下滑动它们。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;panel&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>哈哈哈哈哈哈<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">p</span>&gt;</span>红红火火恍恍惚惚<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="tag">&lt;<span class="name">p</span> <span class="attr">class</span>=<span class="string">&quot;flip&quot;</span>&gt;</span>请点击这里<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span></span><br><span class="line"><span class="javascript">  $(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.panel&quot;</span>).css(<span class="string">&quot;display&quot;</span>, <span class="string">&quot;none&quot;</span>);</span></span><br><span class="line"><span class="javascript">    $(<span class="string">&quot;.flip&quot;</span>).click(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">      $(<span class="string">&quot;.panel&quot;</span>).slideToggle(<span class="string">&quot;slow&quot;</span>);</span></span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/23/Jquery%E6%95%88%E6%9E%9C/" data-id="ckj1hmeq30001ygv13xckbfrg" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-JavaScript Window对象" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/09/JavaScript%20Window%E5%AF%B9%E8%B1%A1/" class="article-date">
+  <time datetime="2020-12-09T13:25:43.879Z" itemprop="datePublished">2020-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/09/JavaScript%20Window%E5%AF%B9%E8%B1%A1/">JavaScript Window对象</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="1-JavaScript-Window-Location"><a href="#1-JavaScript-Window-Location" class="headerlink" title="1. JavaScript Window Location"></a>1. JavaScript Window Location</h1><p><strong>window.location</strong> 对象在编写时可不使用 window 这个前缀</p>
+<blockquote>
+<ul>
+<li>location.hostname 返回 web 主机的域名</li>
+<li>location.pathname 返回当前页面的路径和文件名</li>
+<li>location.port 返回 web 主机的端口 （80 或 443）</li>
+<li>location.protocol 返回所使用的 web 协议（http: 或 https:）</li>
+</ul>
+</blockquote>
+<p>注: 一下实例均以百度首页为例</p>
+<h2 id="Window-Location-Href"><a href="#Window-Location-Href" class="headerlink" title="Window Location Href"></a>Window Location Href</h2><p>location.href 属性返回当前页面的 URL。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="built_in">console</span>.log(location.href);<span class="comment">// https://www.baidu.com/&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Window-Location-Pathname"><a href="#Window-Location-Pathname" class="headerlink" title="Window Location Pathname"></a>Window Location Pathname</h2><p>location.pathname 属性返回 URL 的路径名。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script&gt;<span class="built_in">console</span>.log(location.pathname);<span class="comment">// / //因为在首页所以只有一个/&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="Window-Location-Assign"><a href="#Window-Location-Assign" class="headerlink" title="Window Location Assign"></a>Window Location Assign</h2><p>location.assign() 方法加载新的文档。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">newDoc</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.location.assign(<span class="string">&quot;https://www.baidu.com&quot;</span>)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type=<span class="string">&quot;button&quot;</span> value=<span class="string">&quot;加载新文档&quot;</span> onclick=<span class="string">&quot;newDoc()&quot;</span>&gt;</span><br><span class="line"> <span class="comment">/*</span></span><br><span class="line"><span class="comment"> 	点击过后页面重新加载成百度首页</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="2-JavaScript-Window-History"><a href="#2-JavaScript-Window-History" class="headerlink" title="2. JavaScript Window History"></a>2. JavaScript Window History</h1><p>window.history 对象包含浏览器的历史。</p>
+<blockquote>
+<ul>
+<li>history.back() - 与在浏览器点击后退按钮相同</li>
+<li>history.forward() - 与在浏览器中点击向前按钮相同</li>
+</ul>
+</blockquote>
+<h2 id="Window-history-back"><a href="#Window-history-back" class="headerlink" title="Window history.back()"></a>Window history.back()</h2><p>history.back() 方法加载历史列表中的前一个 URL。</p>
+<p>这与在浏览器中点击后退按钮是相同的：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">goBack</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.history.back()</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type=<span class="string">&quot;button&quot;</span> value=<span class="string">&quot;Back&quot;</span> onclick=<span class="string">&quot;goBack()&quot;</span>&gt;<span class="comment">//点击后退</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="Window-history-forward"><a href="#Window-history-forward" class="headerlink" title="Window history.forward()"></a>Window history.forward()</h2><p>history forward() 方法加载历史列表中的下一个 URL。</p>
+<p>这与在浏览器中点击前进按钮是相同的</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">goForward</span>(<span class="params"></span>)</span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">window</span>.history.forward()<span class="comment">//跳到下一页</span></span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line"></span><br><span class="line">&lt;input type=<span class="string">&quot;button&quot;</span> value=<span class="string">&quot;Forward&quot;</span> onclick=<span class="string">&quot;goForward()&quot;</span>&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>除此之外还可以用**history.go()**这个方法实现前进后退</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">a</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  history.go(<span class="number">1</span>); <span class="comment">// go() 里面的参数表示跳转页面的个数 例如 history.go(1) 表示前进一个页面</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">b</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  history.go(-<span class="number">1</span>); <span class="comment">// go() 里面的参数表示跳转页面的个数 例如 history.go(-1) 表示后退一个页面</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">c</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  history.go(<span class="number">0</span>); <span class="comment">// 0表示重新刷新页面</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/09/JavaScript%20Window%E5%AF%B9%E8%B1%A1/" data-id="ckihg8ewd0000nwv12x216io0" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-NPM使用" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/09/NPM%E4%BD%BF%E7%94%A8/" class="article-date">
+  <time datetime="2020-12-09T13:25:43.879Z" itemprop="datePublished">2020-12-09</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/09/NPM%E4%BD%BF%E7%94%A8/">NPM使用介绍</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="NPM-使用介绍"><a href="#NPM-使用介绍" class="headerlink" title="NPM 使用介绍"></a>NPM 使用介绍</h1><p>NPM 是随同 NodeJS 一起安装的包管理工具，能解决 NodeJS 代码部署上的很多问题，常见的使用场景有以下几种：</p>
+<blockquote>
+<ul>
+<li>允许用户从 NPM 服务器下载别人编写的第三方包到本地使用。</li>
+<li>允许用户从 NPM 服务器下载并安装别人编写的命令行程序到本地使用。</li>
+<li>允许用户将自己编写的包或命令行程序上传到 NPM 服务器供别人使用。</li>
+</ul>
+</blockquote>
+<p>新版的 nodejs 已经集成了 npm，所以之前 npm 也一并安装好了。同样可以通过输入 <strong>“npm -v”</strong> 来测试是否成功安装。出现版本提示表示安装成功:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm - v;</span><br></pre></td></tr></table></figure>
+
+<p>升级 npm：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install npm -g</span><br></pre></td></tr></table></figure>
+
+<p>使用淘宝镜像:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https:<span class="comment">//registry.npm.taobao.org</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="使用-npm-命令安装模块"><a href="#使用-npm-命令安装模块" class="headerlink" title="使用 npm 命令安装模块"></a>使用 npm 命令安装模块</h2><p>比如我们安装常用的 Node.js web 框架模块 <strong>express</strong>:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install express</span><br></pre></td></tr></table></figure>
+
+<p>安装好之后，express 包就放在了工程目录下的 node_modules 目录中，因此在代码中只需要通过 <strong>require(‘express’)</strong> 的方式就好，无需指定第三方包路径。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> express = <span class="built_in">require</span>(<span class="string">&quot;express&quot;</span>);</span><br></pre></td></tr></table></figure>
+
+<h2 id="全局安装与本地安装"><a href="#全局安装与本地安装" class="headerlink" title="全局安装与本地安装"></a>全局安装与本地安装</h2><p>npm 的包安装分为本地安装（local）、全局安装（global）两种，从敲的命令行来看，差别只是有没有-g 而已，比如</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install express          # 本地安装</span><br><span class="line">npm install express -g   # 全局安装</span><br></pre></td></tr></table></figure>
+
+<h4 id="本地安装"><a href="#本地安装" class="headerlink" title="本地安装"></a>本地安装</h4><blockquote>
+<ul>
+<li><ol>
+<li>将安装包放在 ./node_modules 下（运行 npm 命令时所在的目录），如果没有 node_modules 目录，会在当前执行 npm 命令的目录下生成 node_modules 目录。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>可以通过 require() 来引入本地安装的包。</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<h3 id="全局安装"><a href="#全局安装" class="headerlink" title="全局安装"></a>全局安装</h3><blockquote>
+<ul>
+<li><ol>
+<li>将安装包放在 /usr/local 下或者你 node 的安装目录。</li>
+</ol>
+</li>
+<li><ol start="2">
+<li>可以直接在命令行里使用。</li>
+</ol>
+</li>
+</ul>
+</blockquote>
+<h3 id="查看安装信息"><a href="#查看安装信息" class="headerlink" title="查看安装信息"></a>查看安装信息</h3><p>使用 npm list -g 查看所有全局安装的模块</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list -g</span><br></pre></td></tr></table></figure>
+
+<p>使用 npm list <modules_name>查看某个模块的版本号</p>
+<p>exp:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm list grunt</span><br></pre></td></tr></table></figure>
+
+<h3 id="卸载模块"><a href="#卸载模块" class="headerlink" title="卸载模块"></a>卸载模块</h3><p>使用 npm uninstall <mudules_name></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm unistall express</span><br></pre></td></tr></table></figure>
+
+<p>卸载后，你可以到 /node_modules/ 目录下查看包是否还存在，或者使用以下命令查看：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm ls</span><br></pre></td></tr></table></figure>
+
+<h2 id="更新模块"><a href="#更新模块" class="headerlink" title="更新模块"></a>更新模块</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm update express</span><br></pre></td></tr></table></figure>
+
+<h2 id="搜索模块"><a href="#搜索模块" class="headerlink" title="搜索模块"></a>搜索模块</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm search express</span><br></pre></td></tr></table></figure>
+
+<h2 id="创建模块"><a href="#创建模块" class="headerlink" title="创建模块"></a>创建模块</h2><p>创建模块，package.json 文件是必不可少的。我们可以使用 NPM 生成 package.json 文件，生成的文件包含了基本的结果。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">npm init</span><br><span class="line">This utility will walk you through creating a package.json file.</span><br><span class="line">It only covers the most common items, and tries to guess sensible defaults.</span><br><span class="line"></span><br><span class="line">See <span class="string">`npm help json`</span> <span class="keyword">for</span> definitive documentation on these fields</span><br><span class="line">and exactly what they <span class="keyword">do</span>.</span><br><span class="line"></span><br><span class="line">Use <span class="string">`npm install &lt;pkg&gt; --save`</span> afterwards to install a package and</span><br><span class="line">save it <span class="keyword">as</span> a dependency <span class="keyword">in</span> the package.json file.</span><br><span class="line"></span><br><span class="line">Press ^C at any time to quit.</span><br><span class="line">name: (node_modules)                    # 模块名</span><br><span class="line">version: (1.0.0) #版本</span><br><span class="line">description: N  # 描述</span><br><span class="line">entry point: (index.js)</span><br><span class="line">test command: make test</span><br><span class="line">git repository: # 地址</span><br><span class="line">keywords:</span><br><span class="line">author:</span><br><span class="line">license: (ISC)</span><br><span class="line">About to write to ……/node_modules/package.json:      # 生成地址</span><br><span class="line"></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">&quot;name&quot;</span>: <span class="string">&quot;runoob&quot;</span>,</span><br><span class="line">  <span class="string">&quot;version&quot;</span>: <span class="string">&quot;1.0.0&quot;</span>,</span><br><span class="line">  <span class="string">&quot;description&quot;</span>: <span class="string">&quot;Node.js 测试模块(www.runoob.com)&quot;</span>,</span><br><span class="line">  ……</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">Is <span class="built_in">this</span> ok? (yes) yes</span><br></pre></td></tr></table></figure>
+
+<p>接下来我们可以使用以下命令在 npm 资源库中注册用户（使用邮箱注册）：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">npm adduser</span><br><span class="line">Username:</span><br><span class="line">Password:</span><br><span class="line">Email:</span><br></pre></td></tr></table></figure>
+
+<p>最后使用 npm publish 发布模块</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/09/NPM%E4%BD%BF%E7%94%A8/" data-id="ckihg8ewj0001nwv1bt1vapp9" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-关于函数节流和防抖" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/12/09/%E5%85%B3%E4%BA%8E%E5%87%BD%E6%95%B0%E8%8A%82%E6%B5%81%E5%92%8C%E9%98%B2%E6%8A%96/" class="article-date">
@@ -395,143 +663,11 @@
 
 
   
-    <article id="post-javascript中null和undefined的区别" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/" class="article-date">
-  <time datetime="2020-10-27T04:17:35.281Z" itemprop="datePublished">2020-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/">javascript中null和undefined的区别</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="null"><a href="#null" class="headerlink" title="null"></a>null</h3><p>在 JavaScript 中 null 表示什么都没有。null 是只有一个值的特殊类型，所以用来表示一个空对象引用。</p>
-<p>用 typeof 检测 null 返回的是 object。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person = <span class="literal">null</span>;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">//值为 null(空), 但类型为对象</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="undefined"><a href="#undefined" class="headerlink" title="undefined"></a>undefined</h3><p>在 JavaScript 中, <strong>undefined</strong> 是一个没有设置值的变量。</p>
-<p><strong>typeof</strong> 一个没有值的变量会返回 <strong>undefined</strong>。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> person;</span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> person); <span class="comment">// 值为 undefined(空), 类型是undefined</span></span><br><span class="line"><span class="comment">//任何变量都可以通过设置值为 undefined 来清空。 类型为 undefined。</span></span><br><span class="line">person = <span class="literal">undefined</span>; <span class="comment">// 值为 undefined, 类型是undefined</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="headerlink" title="null 和 undefined 的区别"></a>null 和 undefined 的区别</h3><p>null 和 undefined 的值相等，但类型不等：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>); <span class="comment">//object</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">undefined</span>); <span class="comment">// undefined</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> === <span class="literal">undefined</span>); <span class="comment">// false</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="literal">null</span> == <span class="literal">undefined</span>); <span class="comment">//true</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/27/javascript%E4%B8%ADnull%E5%92%8Cundefined%E7%9A%84%E5%8C%BA%E5%88%AB/" data-id="ckgx2sbiw0003ekv1bqby118j" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-JavaScript数据类型" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" class="article-date">
-  <time datetime="2020-10-27T04:03:39.166Z" itemprop="datePublished">2020-10-27</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">JavaScript数据类型</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="JavaScript-数据类型"><a href="#JavaScript-数据类型" class="headerlink" title="JavaScript 数据类型"></a>JavaScript 数据类型</h1><h6 id="在-JavaScript-中有-6-种不同的数据类型"><a href="#在-JavaScript-中有-6-种不同的数据类型" class="headerlink" title="在 JavaScript 中有 6 种不同的数据类型:"></a>在 JavaScript 中有 6 种不同的数据类型:</h6><ul>
-<li><p>string</p>
-</li>
-<li><p>number</p>
-</li>
-<li><p>boolean</p>
-</li>
-<li><p>object</p>
-</li>
-<li><p>function</p>
-</li>
-<li><p>symbol</p>
-</li>
-</ul>
-<h6 id="三种对象类型"><a href="#三种对象类型" class="headerlink" title="三种对象类型:"></a>三种对象类型:</h6><ul>
-<li><p>Object</p>
-</li>
-<li><p>Date</p>
-</li>
-<li><p>Array</p>
-</li>
-</ul>
-<h6 id="两个不包含任何值的数据类型"><a href="#两个不包含任何值的数据类型" class="headerlink" title="两个不包含任何值的数据类型:"></a>两个不包含任何值的数据类型:</h6><ul>
-<li>null</li>
-<li>undefined</li>
-</ul>
-<h2 id="typeof-操作符"><a href="#typeof-操作符" class="headerlink" title="typeof 操作符"></a>typeof 操作符</h2><p>可以使用 <strong>typeof</strong> 操作符来查看 JavaScript 变量的数据类型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typeof</span> <span class="string">&quot;John&quot;</span>; <span class="comment">// 返回 string</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="number">3.14</span>; <span class="comment">// 返回 number</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">NaN</span>; <span class="comment">// 返回 number</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">false</span>; <span class="comment">// 返回 boolean</span></span><br><span class="line"><span class="keyword">typeof</span> [<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>]; <span class="comment">// 返回 object</span></span><br><span class="line"><span class="keyword">typeof</span> &#123; <span class="attr">name</span>: <span class="string">&quot;John&quot;</span>, <span class="attr">age</span>: <span class="number">34</span> &#125;; <span class="comment">// 返回 object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="keyword">new</span> <span class="built_in">Date</span>(); <span class="comment">// 返回 object</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;; <span class="comment">// 返回 function</span></span><br><span class="line"><span class="keyword">typeof</span> myCar; <span class="comment">// 返回 undefined (如果 myCar 没有声明)</span></span><br><span class="line"><span class="keyword">typeof</span> <span class="literal">null</span>; <span class="comment">// 返回 object</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="constructor-属性"><a href="#constructor-属性" class="headerlink" title="constructor 属性"></a>constructor 属性</h2><p><strong>constructor</strong> 属性返回所有 JavaScript 变量的构造函数。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;John&quot;</span>.constructor                 <span class="comment">// 返回函数 String()  &#123; [native code] &#125;</span></span><br><span class="line">(<span class="number">3.14</span>).constructor                 <span class="comment">// 返回函数 Number()  &#123; [native code] &#125;</span></span><br><span class="line"><span class="literal">false</span>.constructor                  <span class="comment">// 返回函数 Boolean() &#123; [native code] &#125;</span></span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].constructor              <span class="comment">// 返回函数 Array()   &#123; [native code] &#125;</span></span><br><span class="line">&#123;<span class="attr">name</span>:<span class="string">&#x27;John&#x27;</span>, <span class="attr">age</span>:<span class="number">34</span>&#125;.constructor  <span class="comment">// 返回函数 Object()  &#123; [native code] &#125;</span></span><br><span class="line"><span class="keyword">new</span> <span class="built_in">Date</span>().constructor             <span class="comment">// 返回函数 Date()    &#123; [native code] &#125;</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;&#125;.constructor         <span class="comment">// 返回函数 Function()&#123; [native code] &#125;</span></span><br></pre></td></tr></table></figure>
-
-<p>所以我们<strong>可以使用 construtor 属性来判断对象中是否包含其他数据类型</strong>:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">arr = [<span class="string">&quot;A&quot;</span>, <span class="string">&quot;B&quot;</span>, <span class="string">&quot;C&quot;</span>];</span><br><span class="line">str = <span class="string">&quot;abc&quot;</span>;</span><br><span class="line"><span class="built_in">console</span>.log(arr.constructor.toString().indexOf(<span class="string">&quot;Array&quot;</span>) &gt; -<span class="number">1</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.constructor.toString().indexOf(<span class="string">&quot;String&quot;</span>) &gt; -<span class="number">1</span>); <span class="comment">//true</span></span><br><span class="line"><span class="built_in">console</span>.log(str.constructor.toString().indexOf(<span class="string">&quot;Array&quot;</span>) &gt; -<span class="number">1</span>); <span class="comment">//false</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="JavaScript-类型转换"><a href="#JavaScript-类型转换" class="headerlink" title="JavaScript 类型转换"></a>JavaScript 类型转换</h3><p>JavaScript 变量可以转换为新变量或其他数据类型：</p>
-<p>​ 1.通过 JavaScript 函数</p>
-<p>​ 2.通过 JavaScript 自身自动转换</p>
-<h6 id="将数字转换为字符串"><a href="#将数字转换为字符串" class="headerlink" title="将数字转换为字符串"></a>将数字转换为字符串</h6><p>​ 全局方法**String()**可以将数字转换为字符串，该方法可用于任何类型的数字，字母，变量，表达式;</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">String</span>(x); <span class="comment">// 将变量 x 转换为字符串并返回</span></span><br><span class="line"><span class="built_in">String</span>(<span class="number">123</span>); <span class="comment">// 将数字 123 转换为字符串并返回</span></span><br><span class="line"><span class="built_in">String</span>(<span class="number">100</span> + <span class="number">23</span>); <span class="comment">// 将数字表达式转换为字符串并返回</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="将字符串转换为数字"><a href="#将字符串转换为数字" class="headerlink" title="将字符串转换为数字"></a>将字符串转换为数字</h6><p>​ 全局方法 Number()可以将字符串转换为数字。</p>
-<p>注意：空字符串会转换为 0，其他的字符串会转换为 NaN</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Number</span>(<span class="string">&quot;3.14&quot;</span>); <span class="comment">// 返回 3.14</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&quot; &quot;</span>); <span class="comment">// 返回 0</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&quot;&quot;</span>); <span class="comment">// 返回 0</span></span><br><span class="line"><span class="built_in">Number</span>(<span class="string">&quot;99 88&quot;</span>); <span class="comment">// 返回 NaN</span></span><br></pre></td></tr></table></figure>
-
-<p>​ 一元运算符 + 也可用于将变量转换为数字:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> x = <span class="string">&quot;5&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> y = +x;</span><br><span class="line"><span class="keyword">var</span> z = <span class="string">&quot;zzz&quot;</span>;</span><br><span class="line"><span class="keyword">var</span> a = +z;</span><br><span class="line"><span class="built_in">console</span>.log(x, y, <span class="keyword">typeof</span> x, <span class="keyword">typeof</span> y); <span class="comment">// 5,5,string,number</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> a); <span class="comment">//NaN</span></span><br></pre></td></tr></table></figure>
-
-<h6 id="自动转换类型"><a href="#自动转换类型" class="headerlink" title="自动转换类型"></a>自动转换类型</h6><p>当 JavaScript 尝试操作一个错误的数据类型时，会自动转换为正确的数据类型。</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">console</span>.log(<span class="number">5</span> + <span class="literal">null</span>); <span class="comment">//5     null转换为0</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;5&quot;</span> + <span class="literal">null</span>); <span class="comment">//5null     null转换为&quot;null&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;5&quot;</span> + <span class="number">1</span>); <span class="comment">//51     1转化为&quot;1&quot;</span></span><br><span class="line"><span class="built_in">console</span>.log(<span class="string">&quot;5&quot;</span> - <span class="number">1</span>); <span class="comment">//4    &quot;5&quot;转换为5</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://example.com/2020/10/27/JavaScript%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/" data-id="ckgx2sbik0000ekv1gfaq2c3e" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
 
 
   <nav id="page-nav">
     
-    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" href="/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/">Next &amp;raquo;</a>
   </nav>
 
 </section>
@@ -550,7 +686,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Archives</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/10/">October 2020</a></li></ul>
     </div>
   </div>
 
@@ -563,23 +699,23 @@
       <ul>
         
           <li>
-            <a href="/2021/03/24/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">(no title)</a>
+            <a href="/2021/04/23/disableHostCheck/">disableHostCheck</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/23/CRC8%E9%AA%8C%E6%A0%A1%E7%AE%97%E6%B3%95/">CRC8校验算法</a>
+          </li>
+        
+          <li>
+            <a href="/2021/04/23/IIS%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8/">IIS文件服务器</a>
+          </li>
+        
+          <li>
+            <a href="/2021/03/24/%E5%89%8D%E7%AB%AF%E9%9D%A2%E8%AF%95/">HTML面试</a>
           </li>
         
           <li>
             <a href="/2020/12/23/JS%E7%9A%84%E6%B7%B1%E6%8B%B7%E8%B4%9D%E4%B8%8E%E6%B5%85%E6%8B%B7%E8%B4%9D/">JS的深拷贝与浅拷贝</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/PHP%E9%9D%A2%E5%AF%B9%E5%AF%B9%E8%B1%A1/">PHP面对对象</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/PHP%E5%8F%98%E9%87%8F/">PHP变量</a>
-          </li>
-        
-          <li>
-            <a href="/2020/12/23/VsCode%E9%85%8D%E7%BD%AEPHP%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/">Vscode配置PHP开发环境</a>
           </li>
         
       </ul>
